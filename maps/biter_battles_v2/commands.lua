@@ -50,7 +50,7 @@ commands.add_command(
         elseif param == 'restartnow' then
             global.reset_are_you_sure = nil
             p(player.name .. ' has restarted the game.')
-            Server.start_scenario('Biter_Battles')
+            Server.start_scenario('Factorio-Biter-Battles')
             return
         elseif param == 'shutdown' then
             if global.shutdown then
