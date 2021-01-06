@@ -19,14 +19,10 @@ commands.add_command(
 
         local param = cmd.parameter
 
-        if param == 'restart' or param == 'shutdown' or param == 'restartnow' then
-            goto continue
-        else
+        if not (param == 'restart' or param == 'shutdown' or param == 'restartnow') then
             p('[ERROR] Arguments are:\nrestart\nshutdown\nrestartnow')
             return
         end
-
-        ::continue::
 
         if not global.reset_are_you_sure then
             global.reset_are_you_sure = true
